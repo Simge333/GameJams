@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class objeTakip : MonoBehaviour
 {
-    public Transform player;
+    
     // Start is called before the first frame update
+    [SerializeField]
+    GameObject oyuncu;
+    Vector3 fark;
     void Start()
     {
-        
+        fark = transform.position - oyuncu.transform.position;   
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.position+ new Vector3(2,1,2);
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            transform.Rotate(new Vector3(0, 180, 0));
-        }
+       transform.position=oyuncu.transform.position + fark+ new Vector3(-1,4,-1);
     }
 }
