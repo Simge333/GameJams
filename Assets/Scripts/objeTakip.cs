@@ -17,6 +17,6 @@ public class objeTakip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       transform.position=oyuncu.transform.position + fark+ new Vector3(-1,4,-1);
+       transform.position=oyuncu.transform.position + fark+ new Vector3(0,4,-2);
     }
 }

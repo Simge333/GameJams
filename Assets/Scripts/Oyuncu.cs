@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Oyuncu : MonoBehaviour
 {
+    public float harekethizi = 3;
+    [HideInInspector] public Vector3 yon;
+    float xInput, yInput;
+    CharacterController controller;
     float speed = 0.2f;
     bool isMove = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        controller= GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -17,6 +21,8 @@ public class Oyuncu : MonoBehaviour
     {
         
     }
+    #region Yön kendii yazýðým
+    
     private void FixedUpdate()
     {
         isMove = false;
@@ -43,7 +49,11 @@ public class Oyuncu : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             transform.Translate(new Vector3(0f,speed,0f));
-            isMove = true;
+            isMove = true; 
         }
     }
+    #endregion
+	#region Hareket
+     
+	#endregion
 }
